@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoccerStats
 {
@@ -14,7 +11,7 @@ namespace SoccerStats
         public Instrumentation Instrumentation { get; set; }
         public string Readlink { get; set; }
         public int TotalEstimatedMatches { get; set; }
-        [JsonProperty(PropertyName = "value")]
+        [JsonProperty( PropertyName = "value" )]
         public List<NewsResult> NewsResults { get; set; }
     }
 
@@ -26,15 +23,15 @@ namespace SoccerStats
 
     public class NewsResult
     {
-        [JsonProperty(PropertyName = "name")]
-        public string HeadLine{ get; set; }
+        [JsonProperty( PropertyName = "name" )]
+        public string HeadLine { get; set; }
         public string url { get; set; }
         public string urlPingSuffix { get; set; }
         public Image image { get; set; }
-        [JsonProperty(PropertyName = "description")]
+        [JsonProperty( PropertyName = "description" )]
         public string Summary { get; set; }
         public Provider[] provider { get; set; }
-        [JsonProperty(PropertyName = "datePublished")]
+        [JsonProperty( PropertyName = "datePublished" )]
         public DateTime DatePublished { get; set; }
         public string category { get; set; }
         public Clusteredarticle[] clusteredArticles { get; set; }
